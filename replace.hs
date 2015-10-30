@@ -11,6 +11,7 @@ import Control.Monad
 import Text.Printf
 
 unquotedEscChar = '\\'
+-- one after esc char is replaced
 cmdList = 
         [
             ["u", "ü"]
