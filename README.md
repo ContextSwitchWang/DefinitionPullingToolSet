@@ -1,3 +1,6 @@
+% Definition Pulling Tool
+% Aaron Wang 
+%
 #Definition Pulling Tool Set
 
 
@@ -6,19 +9,21 @@ This tool set is used to retrieve definition from wiktionary, which is suited fo
 ###Prerequisite
 
 #####      Must:
-        wget, make, a bash compatible shell, perl (with module uri installed)
+
+ wget, make, a bash compatible shell, perl (with module uri installed)
 
 #####      Optional:
-        A haskell compiler, ghc perferrable. If you want to recompile.
+
+ A haskell compiler, ghc perferrable. If you want to recompile.
 
 ###Basic Usage:
 
-* Write the vocabularies one line per word in text files  which must be ended with `.sc` extension. 
+#. Write the vocabularies one line per word in text files  which must be ended with `.sc` extension. 
 You want to use multiple files thus only changed ones will be rebuilt.
 
-* Run `automake.sh` in the same directory to generate Makefile
+#. Run `automake.sh` in the same directory to generate Makefile
 
-* In the same directory run `make`. When you do that `get.sh` will be run for every source file modified since last build.
+#. In the same directory run `make`. When you do that `get.sh` will be run for every source file modified since last build.
 
 ###Details:
 
@@ -50,6 +55,10 @@ You want to use multiple files thus only changed ones will be rebuilt.
 
 ###Troubleshooting
 
-* "Field max limit exceeded" or alike problem when importing generated files.
+(@) "Field max limit exceeded" or alike problem when importing generated files.
 
     Too bad. You gotta find and truncate the field which is too long manually. For example, the definition for `Haus` on wiktionary is just too long. I can't make Anki import it anyhow.
+
+###Contact
+    
+   Send an email to <hughwung@gmail.com> if you have any questions.
