@@ -5,6 +5,7 @@
 
 
 This tool set is used to retrieve definition from wiktionary, which is suited for use in Anki.
+But since the ouput file is `csv`, you can use it for other purpose, too.
 
 ###Prerequisite
 
@@ -21,7 +22,7 @@ This tool set is used to retrieve definition from wiktionary, which is suited fo
 #. Write the vocabularies one line per word in text files  which must be ended with `.sc` extension. 
 You want to use multiple files thus only changed ones will be rebuilt.
 
-#. Run `automake.sh` in the same directory to generate Makefile
+#. Run `automake.sh` in the same directory of the source files to generate Makefile
 
 #. In the same directory run `make`. When you do that `get.sh` will be run for every source file modified since last build.
 
