@@ -9,7 +9,7 @@ This tool set is used to retrieve definition from wiktionary, which is suited fo
         wget, make, a bash compatible shell, perl (with module uri installed)
 
 #####      Optional:
-        A haskell compiler, ghc perferrable.
+        A haskell compiler, ghc perferrable. If you want to recompile.
 
 ###Basic Usage:
 
@@ -41,3 +41,15 @@ You want to use multiple files thus only changed ones will be rebuilt.
     Used to parse the words you wrote, which allows you to use escape sequence to write non-English character.
     For example, you can type German umlaut like `\u \a \o`, which would be replaced with `ü ä ö`. 
     Modify it to suit you needs.
+
+###Tips
+
+* You can put compiled `ParserQ`, `ParseWiki` and `replace` any where you like, but you must modify `get.sh` so it can find them.
+
+* You can modify or supply environment variable to `automake.sh` to change the output file name.
+
+###Troubleshooting
+
+* "Field max limit exceeded" or alike problem when importing generated files.
+
+    Too bad. You gotta find and truncate the field which is too long manually. For example, the definition for `Haus` on wiktionary is just too long. I can't make Anki import it anyhow.
