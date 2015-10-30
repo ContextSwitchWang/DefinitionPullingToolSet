@@ -2,7 +2,8 @@ Definition Pulling Tool Set
 ===========================
 
 This tool set is used to retrieve definition from wiktionary, which is
-suited for use in Anki.
+suited for use in Anki. But since the ouput file is `csv`, you can use
+it for other purpose, too.
 
 ### Prerequisite
 
@@ -20,7 +21,8 @@ A haskell compiler, ghc perferrable. If you want to recompile.
     ended with `.sc` extension. You want to use multiple files thus only
     changed ones will be rebuilt.
 
-2.  Run `automake.sh` in the same directory to generate Makefile
+2.  Run `automake.sh` in the same directory of the source files to
+    generate Makefile
 
 3.  In the same directory run `make`. When you do that `get.sh` will be
     run for every source file modified since last build.
@@ -59,7 +61,7 @@ A haskell compiler, ghc perferrable. If you want to recompile.
 
 ### Troubleshooting
 
-1.  "Field max limit exceeded" or alike problem when importing
+(1) "Field max limit exceeded" or alike problem when importing
     generated files.
 
 Too bad. You gotta find and truncate the field which is too long

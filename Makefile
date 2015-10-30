@@ -6,10 +6,10 @@ ghc=ghc
 all: README.md README.html ParserD  ParserQ	ParseWiki replace
 
 README.md: Spec.md
-	${pandoc} -f markdown README.md -o README.md
+	${pandoc} -f markdown Spec.md -o README.md
 
 README.html: Spec.md
-	${pandoc} -t slidy -s README.md -o README.html 
+	${pandoc} -t slidy -s Spec.md -o README.html 
 
 
 ParserD:   ParserD.hs

@@ -6,7 +6,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title></title>
+  <meta name="author" content="Aaron Wang" />
+  <title>Definition Pulling Tool</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
     href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
@@ -14,18 +15,24 @@
     charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
+<div class="slide titlepage">
+  <h1 class="title">Definition Pulling Tool</h1>
+  <p class="author">
+Aaron Wang
+  </p>
+</div>
 <div id="definition-pulling-tool-set" class="slide section level1">
 <h1>Definition Pulling Tool Set</h1>
-<p>This tool set is used to retrieve definition from wiktionary, which is suited for use in Anki.</p>
+<p>This tool set is used to retrieve definition from wiktionary, which is suited for use in Anki. But since the ouput file is <code>csv</code>, you can use it for other purpose, too.</p>
 <h3 id="prerequisite">Prerequisite</h3>
 <h5 id="must">Must:</h5>
 <p>wget, make, a bash compatible shell, perl (with module uri installed)</p>
 <h5 id="optional">Optional:</h5>
 <p>A haskell compiler, ghc perferrable. If you want to recompile.</p>
 <h3 id="basic-usage">Basic Usage:</h3>
-<ol style="list-style-type: decimal">
+<ol>
 <li><p>Write the vocabularies one line per word in text files which must be ended with <code>.sc</code> extension. You want to use multiple files thus only changed ones will be rebuilt.</p></li>
-<li><p>Run <code>automake.sh</code> in the same directory to generate Makefile</p></li>
+<li><p>Run <code>automake.sh</code> in the same directory of the source files to generate Makefile</p></li>
 <li><p>In the same directory run <code>make</code>. When you do that <code>get.sh</code> will be run for every source file modified since last build.</p></li>
 </ol>
 <h3 id="details">Details:</h3>
